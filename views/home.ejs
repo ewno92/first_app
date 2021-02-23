@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+    <h1>This is home</h1>
+
+    <ul>
+        <% for (let a of animal){ %>
+            <li>
+                <a href="/home/<%=a._id%>">
+                    <%= a.name %>
+                </a>
+            </li>
+            <% } %>
+
+
+
+                <br><br>
+
+                <footer><a href="/new">add new</a></footer>
+    </ul>

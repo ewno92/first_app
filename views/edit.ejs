@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+    <h1>Edit: <%= animal.name %>
+    </h1>
+    <div>
+        <form action="/show/<%=animal._id%>?_method=put" method="post">
+            <label for="name">name</label>
+            <input type="text" id='name' name='name' value="<%=animal.name%>">
+            <br>
+
+            <label for="age">age</label>
+            <input type="number" id=age name='age' value="<%= animal.age%>"><br>
+            <button>Update</button>
+        </form>
+
+    </div>
+    <p>
+
+    </p>

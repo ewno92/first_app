@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+
+    <h1>show</h1>
+
+    <img src="https://source.unsplash.com/collection/3729808/600x400" alt="photo">
+    <h1>
+        name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= animal.name %>
+    </h1>
+
+    <h1>
+        age: <%= animal.age %>
+    </h1>
+    <div>
+        <a href="/home">back home</a>
+        <a href="/show/<%=animal._id%>/edit">edit</a>
+    </div>
+    <br>
+    <form action="/show/<%=animal._id%>?_method=DELETE" method='post'><button>delete</button></form>
