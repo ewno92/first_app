@@ -103,13 +103,13 @@ app.put('/show/:id', async (req, res) => {
 app.delete('/show/:id', async (req, res) => {
   const {id} = req.params;
   await Animal.findByIdAndDelete(id);
-  res.redirect('/home')
+  res.redirect('/')
 })
 
 
 app.get('*', async (req, res) => {
   // res.send('unavailable');
-  res.send('<a href="/home">home</a>');
+  res.send('page not found <br> goto <a href="/">home</a>');
 
 })
 

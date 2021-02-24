@@ -1,18 +1,38 @@
 <% layout('layouts/boilerplate') %>
+
+
     <h1>This is home</h1>
 
-    <ul>
-        <% for (let a of animal){ %>
-            <li>
-                <a href="/home/<%=a._id%>">
-                    <%= a.name %>
-                </a>
-            </li>
-            <% } %>
+
+    <% for (let a of animal){ %>
+        <div class="card" mb-2>
+            <div class="row">
+
+                <div class="col-6">
+                    <img src="https://source.unsplash.com/collection/3729808/1200x800" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-3 card-body">
+                    <h3 class="card-title">
+                        <%= a.name %>
+                    </h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio expedita quo
+                        consequatur distinctio nobis a, in similique amet eaque? Dolorem laboriosam tempora minima
+                        repellendus vel eveniet deleniti ipsa inventore natus!</p>
+                    <a href="/home/<%=a._id%>" class="btn btn-primary"></a>view more</a>
+
+                    <button class="btn btn-primary">button</button>
+
+                </div>
+            </div>
+        </div>
 
 
 
-                <br><br>
 
-                <footer><a href="/new">add new</a></footer>
-    </ul>
+
+        <% } %>
+
+
+
+            <!-- <footer><a href="/new">add new</a></footer> -->
